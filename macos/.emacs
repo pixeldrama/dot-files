@@ -4,7 +4,13 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;;(package-initialize)
+(package-initialize)                ;; Initialize & Install Package
+
+(require 'package)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+
+(setq org-attach-directory "~/.org-data/")
 
 (server-start)
 
@@ -59,7 +65,7 @@
  '(custom-enabled-themes (quote (adwaita)))
  '(package-selected-packages
    (quote
-    (deft ## js2-mode solarized-theme markdown-mode magit haskell-mode auctex)))
+    (org-plus-contrib deft ## js2-mode solarized-theme markdown-mode magit haskell-mode auctex)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
