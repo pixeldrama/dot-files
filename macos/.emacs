@@ -32,13 +32,6 @@
 ;; open log files in less -F mode
 (add-to-list 'auto-mode-alist '("\\.log\\'" . auto-revert-mode))
 
-(require 'package) ;; You might already have this line
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-
-;;; enable asymmetric key encryption
-(require 'epa-file)
-(epa-file-enable)
 
 (require 'org-crypt)
 (org-crypt-use-before-save-magic)
